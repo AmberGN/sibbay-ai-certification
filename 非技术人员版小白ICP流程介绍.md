@@ -6,17 +6,12 @@
 - 下载安装GitHub客户端，[下载地址](https://desktop.github.com)
 
 
-## 二、进行小白贡献者认证
-#### 流程图如下
-![image](https://raw.githubusercontent.com/AmberGN/images/develop/认证流程图.jpg)
+## 二、ICP操作流程
+流程图见[小白流程图](https://www.processon.com/view/link/5a586bc9e4b05a8ff2fcb8f7)
 
-## 三、工作流程与部分关键操作说明
+## 三、部分关键操作说明
 
-##### 1.总体工作流程图
-![image](https://github.com/AmberGN/images/raw/develop/工作流程图.png)
-
-#### 部分关键操作：
-##### 2. 在小白public库中新建issue
+#### 1. 在小白public库中新建issue
 步骤如下：
 
 点击【new issue】按钮
@@ -38,29 +33,22 @@ issue响应速度 | 分钟/次
 
 更多详细规则详见[《issue规范》](https://github.com/sibbay-ai/public/blob/master/issue%20规范.md)
 
-##### 3. 在自己当GitHub中创建一个新的仓库（repository）
-这里描述网页端建库的方式：
-找到网页端右上角的+号，选择后点击【new repository】
 
-![image](https://github.com/AmberGN/images/raw/develop/3.jpg)
-点击后，进入下图页面
-可以随意命名，权限选择public就可以，填写完成后点击【create repository】
+#### 2. 在仓库中新建分支
 
-![image](https://github.com/AmberGN/images/raw/develop/4.jpg)
-
-##### 4. 在仓库中新建分支
-
-可以提前新建分支，也可以在提交commit时新建分支
+所有的contributor仅仅只能向develop上推送pr，推送的同时必须将文件推送至某对应的小分支（基于develop的）。可以提前新建分支，也可以在提交commit时新建分支
 分支命名规则见[《pull request规范》](https://github.com/sibbay-ai/public/blob/master/pull%20request%20规范.md)
 
 ![image](https://github.com/AmberGN/images/raw/develop/网页端添加添加新分支.png)
 
 
-##### 5. 新建markdown文件或上传本地文件
+#### 3. 新建markdown文件或上传本地文件
 
 入口如图所示
 
 ![image](https://github.com/AmberGN/images/raw/develop/创建新文件和上传文件入口.png)
+
+markdown文档书写规则可以参考 [markdown语法](http://blog.csdn.net/witnessai1/article/details/52551362/)
 
 不论是创建新文件还是上传本地文件，都需要进行commit操作
 
@@ -69,22 +57,49 @@ issue响应速度 | 分钟/次
 此时也可以进行新分支当创建，分支创建规则和commit命名具体规则详见[《pull request规范》](https://github.com/sibbay-ai/public/blob/master/pull%20request%20规范.md)
 
 
-
-##### 6. 新建pull request
+#### 4. 新建pull request
 
 commit成功后直接跳转至以下页面来新建pr，具体操作如下所示
 ![image](https://github.com/AmberGN/images/raw/develop/新建pr.png)
 
-##### 7. 修改更新文件
+#### 5. 修改更新文件
 
-将文件push至原文件相同分支下即可
+将更新内容push至原文件相同分支下即可，具体见图
 
+点击push图标进入文件详情，开始对文件进行更改
 
-##### 8. 删除分支
+![image](https://github.com/AmberGN/images/raw/develop/修改文件.jpg)
 
-当pr已被合并（merge）后，需要将该pr曾经对应对自分支删除
+![image](https://github.com/AmberGN/images/raw/develop/commit%20change.jpg)
+
+注意，这时的commit标题依然要关联对应issue，具体见[《pull request规范》](https://github.com/sibbay-ai/public/blob/master/pull%20request%20规范.md)
+
+#### 6. 删除子分支
+
+当pr已被合并（merge）后，需要将该pr曾经对应的子分支删除
 
 ![image](https://github.com/AmberGN/images/raw/develop/删除分支.png)
+
+#### 7. review设置
+
+pr提交后，需要指定reviewer进行验收工作
+一般来说，是由committer来指定reviewer，同时也可能是由开发者自身直接指定committer为reviewer。
+
+操作如下
+
+![image](https://github.com/AmberGN/images/raw/develop/添加reviewer.jpg)
+
+![image](https://github.com/AmberGN/images/raw/develop/review.jpg)
+
+若committer为该pr创建新的review issue（目的为了多人同时review），需要将该pr在comment中关联该review issue。
+
+#### 8. pr的merge与关闭
+
+当且仅当所有reviewer都approve后，改pr被视为合格，将由committer将它merge到代码库中。
+
+若该pr没有被全部通过，需要一直重新提交更新、重新review，直至全部通过。
+
+成功被merge的pr会被关闭。
 
 
 ## 四、交付件格式
